@@ -6,7 +6,6 @@ import autoprefixer from "autoprefixer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/Prakhar-Jaiswal/",
   server: {
     host: "::",
     port: 8080,
@@ -17,6 +16,7 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  base: "/Prakhar-Jaiswal",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
