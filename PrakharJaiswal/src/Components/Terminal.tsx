@@ -117,92 +117,90 @@ __________                __   .__                        ____.      .__        
       'In my free time I try to finish the projects that I am working on.',
       '',
       'When I\'m not coding, you can find me exploring new technologies or drinking Chai,',
-      'trying to contribute to open source projects, or sharing knowledge with',
-      'the developer community.',
+      'trying to contribute to open source projects, or sharing knowledge with the developer community.',
       '',
-      '🎯 Quick Stats:',
-      '  • 5+ years of experience',
-      '  • 50+ projects completed',
-      '  • 10+ technologies mastered',
-      '  • ∞ passion for coding'
      ],
 
      projects: () => [
-      'Here are some of my notable projects:',
+      '╔═══════════════════════════════════════════════════════════════════════════════╗',
+      '║                             MY NOTABLE PROJECTS                            ',
+      '╚═══════════════════════════════════════════════════════════════════════════════╝',
       '',
-      '📱 Advisor OP',
-      '   Gemini-Wrapper to fix issues with the growing concern of mental issues.',
-      '   Technologies: HTML, CSS, JS, Django, React, Sqlite, Gemini API',
-      '   🔗 https://github.com/3pkm/AdvisorOP',
+      '┌─────────────────────────────────────────────────────────────────────────────┐',
+      '│  ADVISOR-OP                                                              ',
+      '├─────────────────────────────────────────────────────────────────────────────┤',
+      '│   A Gemini-powered wrapper designed to address the growing               ',
+      '│   mental health concerns with AI-driven advisory solutions.             ',
+      '│                                                                         ',
+      '│   ⚡ Technologies: HTML, CSS, JS, Django, React, SQLite, Gemini API     ',
+      '│   🔗 Repository: https://github.com/3pkm/AdvisorOP                       ',
+      '└─────────────────────────────────────────────────────────────────────────────┘',
       '',
-      '🚀 Investment-Handeller',
-      '   It helps for tracking investments, performing financial calculations, and managing investment portfolios.',
-      '   Technologies: Django, DjangoAuth, Bootstrap, SQLite, Chart.js',
-      '   🔗 https://github.com/3pkm/Investment-Handeller',
       '',
-      '🌐 Autocompelete',
-      '   It is a Windows tool that lets you create your own keywords and link them to commands or scripts to automate multi-step tasks.',
-      '   Technologies: Python, Batch Scripting, tkinter, pyinstaller',
-      '   🔗 https://github.com/3pkm/Autocompelete',
+      '┌─────────────────────────────────────────────────────────────────────────────┐',
+      '│  INVESTMENT-HANDELLER                                                    ',
+      '├─────────────────────────────────────────────────────────────────────────────┤',
+      '│   A comprehensive tool for tracking investments, performing financial    ',
+      '│   calculations, and managing investment portfolios efficiently.          ',
+      '│                                                                         ',
+      '│   ⚡ Technologies: Django, DjangoAuth, Bootstrap, SQLite, Chart.js       ',
+      '│   🔗 Repository: https://github.com/3pkm/Investment-Handeller            ',
+      '└─────────────────────────────────────────────────────────────────────────────┘',
       '',
-      '🤖 Real-Time Multi-Modal Threat Detection System',
-      'It\'s an application that strives to address the rising violent attacks and the limitations of human monitoring (e.g., cognitive overload, high false alarm rates) demand advanced surveillance systems.',
-      '   Technologies: Angular, SCSS, Python, TensorFlow, efficientnetv2, Yolo V11',
-      '   🔗 https://aryan-dani.github.io/Threat_Detection_System/dashboard'
+      '',
+      '┌─────────────────────────────────────────────────────────────────────────────┐',
+      '│  AUTOCOMPELETE                                                           ',
+      '├─────────────────────────────────────────────────────────────────────────────┤',
+      '│   A Windows automation tool that allows users to create custom          ',
+      '│   keywords linked to commands/scripts for multi-step task automation.   ',
+      '│                                                                         ',
+      '│   ⚡ Technologies: Python, Batch Scripting, tkinter, pyinstaller        ',
+      '│   🔗 Repository: https://github.com/3pkm/Autocompelete                  ',
+      '└─────────────────────────────────────────────────────────────────────────────┘',
+      '',
+      '',
+      '┌─────────────────────────────────────────────────────────────────────────────┐',
+      '│  REAL-TIME MULTI-MODAL THREAT DETECTION SYSTEM                          ',
+      '├─────────────────────────────────────────────────────────────────────────────┤',
+      '│   Advanced surveillance system addressing rising violent attacks and     ',
+      '│   human monitoring limitations through AI-powered threat detection.     ',
+      '│                                                                         ',
+      '│   ⚡ Technologies: Angular, SCSS, Python, TensorFlow, EfficientNetV2,   ',
+      '│      YOLO V11                                                           ',
+      '│   🔗 Live Demo: https://aryan-dani.github.io/Threat_Detection_System/   ',
+      '│      dashboard                                                          ',
+      '└─────────────────────────────────────────────────────────────────────────────┘',
+      '',
+      '',
+      '💡 Tip: Click any 🔗 link to open the project in a new tab!'
      ],
 
      skills: () => [
       'Technical Skills:',
       '',
       '💻 Frontend:',
-      '   • React, Vue.js, Angular',
+      '   • React, Angular',
       '   • TypeScript, JavaScript (ES6+)',
       '   • HTML5, CSS3, Sass/SCSS',
       '   • Tailwind CSS, Bootstrap',
-      '   • WebPack, Vite, Next.js',
+      '   • Vite',
       '',
       '🔧 Backend:',
-      '   • Node.js, Express.js',
-      '   • Python, Django, Flask',
-      '   • RESTful APIs, GraphQL',
-      '   • Microservices Architecture',
+      '   • Python, Django',
+      '   • RESTful APIs',
       '',
       '🗄️ Database:',
-      '   • MongoDB, PostgreSQL, MySQL',
-      '   • Redis, Firebase',
-      '   • Database Design & Optimization',
-      '',
-      '☁️ DevOps & Tools:',
-      '   • Docker, Kubernetes',
-      '   • AWS, Google Cloud, Azure',
-      '   • Git, GitHub Actions, CI/CD',
-      '   • Jest, Cypress, Testing',
-      '',
-      '📊 Proficiency Levels:',
-      '   JavaScript/TypeScript: ████████████ 95%',
-      '   React/Vue.js:          ███████████  90%',
-      '   Node.js/Python:       ██████████   85%',
-      '   Database Systems:     █████████    80%',
-      '   Cloud Platforms:      ████████     75%'
+      '   • MySQL',
      ],
 
      contact: () => [
       'Let\'s connect! 📫',
       '',
-      '📧 Email: developer@example.com',
-      '💼 LinkedIn: https://linkedin.com/in/yourprofile',
-      '🐙 GitHub: https://github.com/yourusername',
-      '🐦 Twitter: https://twitter.com/yourhandle',
-      '🌐 Website: https://yourwebsite.com',
-      '📱 Phone: +1 (555) 123-4567',
+      '📧 Email (fastest response): jas.prakhar@gmail.com',
+      '💼 LinkedIn (professional inquiries): https://bit.ly/47bREhS',
+      '🐙 GitHub (code collaboration): https://github.com/3pkm',
       '',
-      '💬 Preferred contact methods:',
-      '  1. Email (fastest response)',
-      '  2. LinkedIn (professional inquiries)',
-      '  3. GitHub (code collaboration)',
-      '',
-      'I\'m always open to interesting conversations and',
-      'collaboration opportunities!'
+      'I\'m always open to interesting conversations and collaboration opportunities!',
      ],
 
      experience: () => [
@@ -230,19 +228,19 @@ __________                __   .__                        ____.      .__        
      ls: (path?: string) => {
       const currentPath = path || currentDirectory;
       if (currentPath === '/home/user') {
-        return [
-         'total 4',
-         'drwxr-xr-x  2 user user 4096 Jan 15 12:30 games/',
-         '-rw-r--r--  1 user user  124 Jan 15 12:30 about.txt',
-         '-rw-r--r--  1 user user  256 Jan 15 12:30 projects.txt',
-         '-rw-r--r--  1 user user   89 Jan 15 12:30 resume.txt'
-        ];
+      return [
+       'total 4',
+       'drwxr-xr-x  2 user user 4096 Jan 15 12:30 games/',
+       '-rw-r--r--  1 user user  124 Jan 15 12:30 about.txt',
+       '-rw-r--r--  1 user user  256 Jan 15 12:30 projects.txt',
+       '-rw-r--r--  1 user user   89 Jan 15 12:30 resume.txt'
+      ];
       } else if (currentPath === '/home/user/games') {
-        return [
-         'total 2',
-         '-rw-r--r--  1 user user   45 Jan 15 12:30 guess.txt',
-         '-rw-r--r--  1 user user   32 Jan 15 12:30 quiz.txt'
-        ];
+      return [
+       'total 2',
+       '-rw-r--r--  1 user user   45 Jan 15 12:30 guess.txt',
+       '-rw-r--r--  1 user user   32 Jan 15 12:30 quiz.txt'
+      ];
       }
       return ['Directory not found'];
      },
@@ -253,36 +251,36 @@ __________                __   .__                        ____.      .__        
 
      cd: (dir?: string) => {
       if (!dir || dir === '~' || dir === '/home/user') {
-        setCurrentDirectory('/home/user');
-        return [`Changed directory to /home/user`];
+      setCurrentDirectory('/home/user');
+      return [`Changed directory to /home/user`];
       } else if (dir === 'games') {
-        setCurrentDirectory('/home/user/games');
-        return [`Changed directory to /home/user/games`];
+      setCurrentDirectory('/home/user/games');
+      return [`Changed directory to /home/user/games`];
       } else if (dir === '..' && currentDirectory === '/home/user/games') {
-        setCurrentDirectory('/home/user');
-        return [`Changed directory to /home/user`];
+      setCurrentDirectory('/home/user');
+      return [`Changed directory to /home/user`];
       }
       return [`Directory not found: ${dir}}`];
     },
 
     cat: (filename?: string) => {
       if (!filename) {
-        return ['Usage: cat [filename]', 'Available files: about.txt, projects.txt, resume.txt'];
+      return ['Usage: cat [filename]', 'Available files: about.txt, projects.txt, resume.txt'];
       }
       
       const files: Record<string, string[]> = {
-        'about.txt': ['Learn more about me with the "about" command'],
-        'projects.txt': ['View my projects with the "projects" command'],
-        'resume.txt': [
-          '📄 Resume',
-          '==================',
-          'Download my full resume:',
-          '🔗 https://example.com/resume.pdf',
-          '',
-          'Or use the "resume" command for more options'
-        ],
-        'guess.txt': ['Number guessing game - use "games" command to play'],
-        'quiz.txt': ['Tech quiz game - use "games" command to play']
+      'about.txt': ['Learn more about me with the "about" command'],
+      'projects.txt': ['View my projects with the "projects" command'],
+      'resume.txt': [
+        '📄 Resume',
+        '==================',
+        'Download my full resume:',
+        '🔗 https://example.com/resume.pdf',
+        '',
+        'Or use the "resume" command for more options'
+      ],
+      'guess.txt': ['Number guessing game - use "games" command to play'],
+      'quiz.txt': ['Tech quiz game - use "games" command to play']
       };
 
       return files[filename] || [`File not found: ${filename}`];
@@ -290,7 +288,7 @@ __________                __   .__                        ____.      .__        
 
     history: () => {
       if (commandHistory.length === 0) {
-        return ['No command history available'];
+      return ['No command history available'];
       }
       return commandHistory.map((cmd, index) => `${index + 1}  ${cmd}`);
     },
@@ -314,20 +312,20 @@ __________                __   .__                        ____.      .__        
     theme: (themeName?: string) => {
       const themes = ['default', 'matrix', 'retro'];
       if (!themeName) {
-        return [
-          'Available themes:',
-          '  • default - Classic terminal theme',
-          '  • matrix  - Green matrix-style theme',
-          '  • retro   - Vintage amber theme',
-          '',
-          `Current theme: ${theme}`,
-          'Usage: theme [theme-name]'
-        ];
+      return [
+        'Available themes:',
+        '  • default - Classic terminal theme',
+        '  • matrix  - Green matrix-style theme',
+        '  • retro   - Vintage amber theme',
+        '',
+        `Current theme: ${theme}`,
+        'Usage: theme [theme-name]'
+      ];
       }
       
       if (themes.includes(themeName)) {
-        setTheme(themeName as any);
-        return [`Theme changed to: ${themeName}`];
+      setTheme(themeName as any);
+      return [`Theme changed to: ${themeName}`];
       }
       
       return [`Unknown theme: ${themeName}`, `Available themes: ${themes.join(', ')}`];
@@ -336,17 +334,17 @@ __________                __   .__                        ____.      .__        
     matrix: () => {
       setTheme('matrix');
       return [
-        '🟢 Entering the Matrix...',
-        '',
-        '01001000 01100101 01101100 01101100 01101111',
-        '01010111 01101111 01110010 01101100 01100100',
-        '',
-        'Wake up, Neo...',
-        'The Matrix has you...',
-        'Follow the white rabbit.',
-        '',
-        '🔓 Access granted to the real world.',
-        'Theme switched to Matrix mode.'
+      '🟢 Entering the Matrix...',
+      '',
+      '01001000 01100101 01101100 01101100 01101111',
+      '01010111 01101111 01110010 01101100 01100100',
+      '',
+      'Wake up, Neo...',
+      'The Matrix has you...',
+      'Follow the white rabbit.',
+      '',
+      '🔓 Access granted to the real world.',
+      'Theme switched to Matrix mode.'
       ];
     },
 
@@ -417,18 +415,18 @@ __________                __   .__                        ____.      .__        
     guess: (number?: string) => {
       const targetNumber = 42; // Could be randomized
       if (!number) {
-        return ['🎯 Guess a number between 1-100!', 'Usage: guess [number]'];
+      return ['🎯 Guess a number between 1-100!', 'Usage: guess [number]'];
       }
       const guess = parseInt(number);
       if (isNaN(guess)) {
-        return ['Please enter a valid number!'];
+      return ['Please enter a valid number!'];
       }
       if (guess === targetNumber) {
-        return ['🎉 Congratulations! You guessed it!', `The number was ${targetNumber}!`];
+      return ['🎉 Congratulations! You guessed it!', `The number was ${targetNumber}!`];
       } else if (guess < targetNumber) {
-        return ['📈 Too low! Try a higher number.'];
+      return ['📈 Too low! Try a higher number.'];
       } else {
-        return ['📉 Too high! Try a lower number.'];
+      return ['📉 Too high! Try a lower number.'];
       }
     },
 
@@ -447,17 +445,17 @@ __________                __   .__                        ____.      .__        
 
     fact: () => {
       const facts = [
-        'The first computer bug was an actual bug found in 1947!',
-        'JavaScript was created in just 10 days by Brendan Eich.',
-        'The term "debugging" comes from removing actual bugs from computers.',
-        'Python is named after Monty Python\'s Flying Circus.',
-        'The first programming language was Fortran, created in 1957.',
-        'Git was created by Linus Torvalds in just 2 weeks!'
+      'The first computer bug was an actual bug found in 1947!',
+      'JavaScript was created in just 10 days by Brendan Eich.',
+      'The term "debugging" comes from removing actual bugs from computers.',
+      'Python is named after Monty Python\'s Flying Circus.',
+      'The first programming language was Fortran, created in 1957.',
+      'Git was created by Linus Torvalds in just 2 weeks!'
       ];
       const randomFact = facts[Math.floor(Math.random() * facts.length)];
       return ['🤓 Fun Programming Fact:', '', randomFact];
     }
-  };
+    };
 
   // Enhanced command execution with aliases
   const executeCommand = useCallback((cmd: string) => {
@@ -602,7 +600,6 @@ __________                __   .__                        ____.      .__        
       '║  Type "help" to see available commands    ',
       '║  Use Tab for autocomplete                 ',
       '║  Use ↑↓ arrow keys to navigate history   ',
-      '║  Press Ctrl+L to clear screen            ',
       '╚═══════════════════════════════════════════╝',
       ''
     ];

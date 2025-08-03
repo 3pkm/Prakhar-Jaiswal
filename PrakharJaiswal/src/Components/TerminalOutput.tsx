@@ -55,7 +55,7 @@ export const TerminalOutput = ({ command, output, timestamp, theme = 'default', 
         currentCharIndex = 0;
         currentDisplayedLines.push('');
       }
-    }, Math.random() * 20 + 10); // Variable typing speed for more natural feel
+    }, Math.random() * 10 + 10); // Variable typing speed for more natural feel
 
     return () => clearInterval(typeInterval);
   }, [output]);
@@ -69,8 +69,6 @@ export const TerminalOutput = ({ command, output, timestamp, theme = 'default', 
     });
   };
 
-  if (!command && !output) return null;
-
   // Theme-based color classes
   const getThemeTextColor = (type: string) => {
     const baseClasses = {
@@ -81,6 +79,96 @@ export const TerminalOutput = ({ command, output, timestamp, theme = 'default', 
     };
     return baseClasses[type as keyof typeof baseClasses] || baseClasses.text;
   };
+
+  // Helper function to make links clickable and apply styling
+  const renderLineWithLinks = (line: string, index: number) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    
+    if (urlRegex.test(line)) {
+      const parts = line.split(urlRegex);
+      return (
+        <div key={index} className="leading-relaxed">
+          {parts.map((part, partIndex) => {
+            if (urlRegex.test(part)) {
+              return (
+                <a
+                  key={partIndex}
+                  href={part}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${getThemeTextColor('prompt')} terminal-glow underline hover:brightness-125 cursor-pointer transition-all duration-200`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  {part}
+                </a>
+              );
+            }
+            return <span key={partIndex}>{part}</span>;
+          })}
+        </div>
+      );
+    }
+
+    // Apply styling based on line content
+    const getLineStyle = () => {
+      // Box drawing characters
+      if (line.match(/^[╔╗╚╝║═├┤┌┐└┘│─┬┴┼]/)) {
+        return `${getThemeTextColor('prompt')} terminal-glow font-bold`;
+      }
+      // Project titles with 📦
+      if (line.includes('📦') && !line.includes('Technologies') && !line.includes('Repository')) {
+        return `${getThemeTextColor('accent')} terminal-glow font-bold text-lg`;
+      }
+      // Technology lines with ⚡
+      if (line.includes('⚡ Technologies:')) {
+        return `${theme === 'matrix' ? 'text-yellow-400' : theme === 'retro' ? 'text-yellow-300' : 'text-yellow-400'} terminal-glow`;
+      }
+      // Link lines with 🔗
+      if (line.includes('🔗')) {
+        return `${getThemeTextColor('prompt')} terminal-glow`;
+      }
+      // Section headers
+      if (line.includes('MY NOTABLE PROJECTS')) {
+        return `${getThemeTextColor('accent')} terminal-glow font-bold text-center`;
+      }
+      // Tips and hints
+      if (line.includes('💡 Tip:')) {
+        return `${theme === 'matrix' ? 'text-cyan-400' : theme === 'retro' ? 'text-cyan-300' : 'text-cyan-400'} terminal-glow italic`;
+      }
+      // Error messages
+      if (line.includes('Command not found:') || line.includes('not found') || line.includes('Error:')) {
+        return `${getThemeTextColor('error')} terminal-glow`;
+      }
+      // Progress bars
+      if (line.includes('████')) {
+        return `${getThemeTextColor('accent')} font-mono`;
+      }
+      // Matrix-style lines
+      if (line.includes('🟢') || line.includes('Wake up') || line.includes('Matrix')) {
+        return `${theme === 'matrix' ? 'text-green-400' : getThemeTextColor('accent')} terminal-glow animate-pulse`;
+      }
+      // Command help sections
+      if (line.includes('Available commands:') || line.includes('Technical Skills:') || line.includes('Professional Experience:') || (line.includes(':') && (line.includes('📋') || line.includes('🖥️') || line.includes('🎨') || line.includes('🎮')))) {
+        return `${getThemeTextColor('prompt')} terminal-glow font-bold`;
+      }
+      // Indented items
+      if (line.startsWith('  ') || line.startsWith('   •')) {
+        return `${getThemeTextColor('text')}/80`;
+      }
+      // Default styling
+      return getThemeTextColor('text');
+    };
+
+    return (
+      <div key={index} className="leading-relaxed">
+        <span className={getLineStyle()}>{line}</span>
+      </div>
+    );
+  };
+
+  if (!command && !output) return null;
 
   return (
     <div className="mb-2">
@@ -97,34 +185,8 @@ export const TerminalOutput = ({ command, output, timestamp, theme = 'default', 
       )}
       
       {displayedOutput.length > 0 && (
-        <div className={`${getThemeTextColor('text')} ml-4 mb-2`}>
-          {displayedOutput.map((line, index) => (
-            <div key={index} className="leading-relaxed">
-              {line.startsWith('╔') || line.startsWith('║') || line.startsWith('╚') || line.startsWith('█') ? (
-                <span className={`${getThemeTextColor('prompt')} terminal-glow`}>{line}</span>
-              ) : line.startsWith('📱') || line.startsWith('🚀') || line.startsWith('🌐') || line.startsWith('🤖') ? (
-                <span className={`${getThemeTextColor('accent')} terminal-glow`}>{line}</span>
-              ) : line.startsWith('💻') || line.startsWith('🔧') || line.startsWith('🗄️') || line.startsWith('☁️') ? (
-                <span className={`${getThemeTextColor('accent')} terminal-glow`}>{line}</span>
-              ) : line.startsWith('🏢') || line.startsWith('💼') || line.startsWith('🎓') ? (
-                <span className={`${getThemeTextColor('accent')} terminal-glow`}>{line}</span>
-              ) : line.startsWith('📧') || line.startsWith('🐙') || line.startsWith('🐦') || line.startsWith('🌐') || line.startsWith('🔗') ? (
-                <span className={`${getThemeTextColor('prompt')} terminal-glow hover:underline cursor-pointer`}>{line}</span>
-              ) : line.startsWith('  ') || line.startsWith('   •') ? (
-                <span className={`${getThemeTextColor('text')}/80`}>{line}</span>
-              ) : line.includes('Available commands:') || line.includes('Technical Skills:') || line.includes('Professional Experience:') || line.includes(':') && (line.includes('📋') || line.includes('🖥️') || line.includes('🎨') || line.includes('🎮')) ? (
-                <span className={`${getThemeTextColor('prompt')} terminal-glow font-bold`}>{line}</span>
-              ) : line.includes('Command not found:') || line.includes('not found') || line.includes('Error:') ? (
-                <span className={`${getThemeTextColor('error')} terminal-glow`}>{line}</span>
-              ) : line.includes('████') ? (
-                <span className={`${getThemeTextColor('accent')} font-mono`}>{line}</span>
-              ) : line.includes('🟢') || line.includes('Wake up') || line.includes('Matrix') ? (
-                <span className={`${theme === 'matrix' ? 'text-green-400' : getThemeTextColor('accent')} terminal-glow animate-pulse`}>{line}</span>
-              ) : (
-                <span className={getThemeTextColor('text')}>{line}</span>
-              )}
-            </div>
-          ))}
+        <div className={`${getThemeTextColor('text')} ml-4 mb-2 space-y-1`}>
+          {displayedOutput.map((line, index) => renderLineWithLinks(line, index))}
           {isTyping && (
             <span className={`${getThemeTextColor('prompt')} cursor-blink`}>█</span>
           )}
